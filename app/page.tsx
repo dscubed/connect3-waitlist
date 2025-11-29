@@ -22,20 +22,25 @@ const supabase = createClient(
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async () => {
+    setSubmitting(true);
     if (!name) {
       toast.error("Please enter your name.");
+      setSubmitting(false);
       return;
     }
     if (!email) {
       toast.error("Please enter your email.");
+      setSubmitting(false);
       return;
     }
 
     if (!email.includes("@")) {
       toast.error("Please enter a valid email address.");
+      setSubmitting(false);
       return;
     }
 
@@ -45,9 +50,10 @@ export default function Home() {
 
     if (error) {
       toast.error("Internal error. Please try again later.");
+      setSubmitting(false);
       return;
     }
-
+    setSubmitting(false);
     setSubmitted(true);
   };
 
@@ -124,6 +130,7 @@ export default function Home() {
                 ></input>
               </div>
               <button
+                disabled={submitting}
                 className="w-full font-semibold rounded-4xl bg-white border-black border-2 text-[#854ECB] p-3 drop-shadow-lg hover:bg-gray-100 transition-all hover:text-[#56367f]"
                 onClick={handleSubmit}
               >
