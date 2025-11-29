@@ -25,3 +25,28 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 11s ease-in-out 1s infinite;
+}
+
+.animate-float-slow {
+  animation: float 12s ease-in-out infinite;
+}
+
+.animate-bg {
+  animation: float 20s ease-in-out 2s infinite;
+}
