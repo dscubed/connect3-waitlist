@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Libre_Baskerville } from "next/font/google";
 import { Toaster } from "sonner";
 import { LogSnagProvider } from '@logsnag/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,6 +46,7 @@ export default function RootLayout({
           position="top-center"
         />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
     </html>
   );
 }
