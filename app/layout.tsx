@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <LogSnagProvider token='2abb1d8838311f800c3e60a429e34163' project='c3' />
+        <LogSnagProvider token={process.env.NEXT_PUBLIC_LOGSNAG_TOKEN!} project={process.env.NEXT_PUBLIC_LOGSNAG_PROJECT!} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} antialiased`}
