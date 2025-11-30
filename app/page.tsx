@@ -124,7 +124,7 @@ export default function Home() {
         </div>
 
         <div className="space-x-6 text-sm mr-4">
-          <Link href="/privacy">Privacy</Link>
+          <Link href="https://ds-cubed.notion.site/c3-privacy" target="_blank">Privacy</Link>
           <Link href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/dscubed/" target="_blank">DSCubed</Link>
           <Link href="https://www.uwastudentguild.com/clubs/data-science-club-of-uwa" target="_blank">DSC</Link>
         </div>
