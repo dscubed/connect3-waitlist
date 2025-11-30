@@ -50,3 +50,12 @@ body {
 .animate-bg {
   animation: float 20s ease-in-out 2s infinite;
 }
+        
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #767cf7; 
+  --gradient-color-2: #f879f6; 
+  --gradient-color-3: #f2f7f6;  
+  --gradient-color-4: #f2f7f6;
+}

@@ -9,8 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@logsnag/next": "^1.0.3",
     "@supabase/supabase-js": "^2.86.0",
     "next": "16.0.5",
+    "npm": "^11.6.4",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",

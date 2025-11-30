@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Libre_Baskerville } from "next/font/google";
 import { Toaster } from "sonner";
+import { LogSnagProvider } from '@logsnag/next';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <LogSnagProvider token='2abb1d8838311f800c3e60a429e34163' project='waitlist' />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} antialiased`}
       >
