@@ -132,12 +132,6 @@ export default function Home() {
 
       <main className="relative flex min-h-screen w-full max-w-6xl items-center justify-center py-12 px-6">
         {/* Characters */}
-        <div className="absolute -z-10">
-          {/* <Shapes
-            size={648}
-            className="opacity-80 animate-bg max-w-full max-h-full"
-          /> */}
-        </div>
         <div className="relative flex flex-1 min-w-0">
           <BlueCharacter
             size={120}
