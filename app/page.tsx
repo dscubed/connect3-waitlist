@@ -117,7 +117,7 @@ export default function Home() {
       {/* Mesh gradient */}
       <canvas id="gradient-canvas" data-transition-in className="absolute inset-0 -z-20 opacity-40 blur-xl" />
 
-      <div className="absolute inset-0 p-4 flex gap-4 justify-between items-center h-max">
+      <div className="absolute inset-0 p-4 flex gap-4 justify-between items-center h-max z-100">
         <div className="flex items-center gap-3 text-lg font-semibold">
           <Logo size={28} className="top-6 left-6" />
           <p>Connect3</p>
