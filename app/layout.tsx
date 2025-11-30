@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import { LogSnagProvider } from '@logsnag/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} antialiased`}
       >
-        {children}
+        <Suspense fallback={<></>}>
+          {children}
+        </Suspense>
         <Toaster
           position="top-center"
         />
