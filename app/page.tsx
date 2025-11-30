@@ -113,42 +113,42 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans">
+    <div className="relative flex flex-col min-h-svh font-sans items-center">
       {/* Mesh gradient */}
       <canvas id="gradient-canvas" data-transition-in className="absolute inset-0 -z-20 opacity-40 blur-xl" />
 
-      <div className="absolute inset-0 p-4 flex gap-4 justify-between items-center h-max z-100">
+      <div className="sticky top-0 inset-0 p-4 flex gap-4 justify-between items-center h-max w-full z-200">
         <div className="flex items-center gap-3 text-lg font-semibold">
           <Logo size={28} className="top-6 left-6" />
           <p>Connect3</p>
         </div>
 
-        <div className="space-x-6 text-sm mr-4">
+        <div className="space-x-6 text-sm mr-2">
           <Link href="https://ds-cubed.notion.site/c3-privacy" target="_blank">Privacy</Link>
           <Link href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/dscubed/" target="_blank">DSCubed</Link>
           <Link href="https://www.uwastudentguild.com/clubs/data-science-club-of-uwa" target="_blank">DSC</Link>
         </div>
       </div>
 
-      <main className="relative flex min-h-screen w-full max-w-6xl items-center justify-center py-12 px-6">
+      <main className="relative flex flex-1 h-full w-full max-w-6xl items-center justify-center py-12 px-6 overflow-clip">
         {/* Characters */}
         <div className="relative flex flex-1 min-w-0">
           <BlueCharacter
             size={120}
-            className="absolute left-1/2 top-0 transform -translate-x-8 md:-translate-x-4 -translate-y-64 sm:-translate-y-52 animate-float z-20"
+            className="absolute left-1/2 top-0 transform -translate-x-8 md:-translate-x-4 -translate-y-80 sm:-translate-y-52 animate-float z-20"
           />
           <RedCharacter
             size={180}
-            className="absolute hidden sm:block left-0 top-1/2 transform -translate-y-1/2 md:translate-x-12 animate-float-delayed z-20"
+            className="absolute hidden sm:block left-0 top-1/2 transform -translate-y-1/2 md:translate-x-10 animate-float-delayed z-20"
           />
           <GreenCharacter
             size={130}
-            className="absolute left-1/2 bottom-0 transform -translate-x-8 md:-translate-x-4 translate-y-64 sm:translate-y-52 animate-float-slow z-20"
+            className="absolute left-1/2 bottom-0 transform -translate-x-8 md:-translate-x-4 translate-y-[calc(86*4px)] sm:translate-y-52 animate-float-slow z-20"
           />
         </div>
 
         {/* Card */}
-        <div className="relative flex flex-col text-center gap-4 max-w-sm bg-white rounded-2xl p-4 z-10 shadow-xl">
+        <div className="relative flex flex-col text-center gap-4 max-w-sm bg-white rounded-2xl p-4 z-100 shadow-xl">
           {/* Countdown */}
           <div className="flex gap-2 justify-center text-sm">
             <div className="flex flex-col items-center bg-purple-50 rounded-lg px-3 py-2">
@@ -247,7 +247,7 @@ export default function Home() {
         <div className="relative flex flex-1 min-w-0">
           <PurpleCharacter
             size={100}
-            className="absolute right-1/2 top-0 transform translate-x-8 md:translate-x-4 -translate-y-64 sm:-translate-y-52 animate-float-delayed z-20"
+            className="absolute right-1/2 top-0 transform translate-x-8 md:translate-x-4 -translate-y-80 sm:-translate-y-52 animate-float-delayed z-20"
           />
           <OrangeCharacter
             size={140}
@@ -255,7 +255,7 @@ export default function Home() {
           />
           <YellowCharacter
             size={100}
-            className="absolute right-1/2 bottom-0 transform translate-x-8 md:translate-x-4 translate-y-64 sm:translate-y-52 animate-float-slow z-20"
+            className="absolute right-1/2 bottom-0 transform translate-x-8 md:translate-x-4 translate-y-80 sm:translate-y-52 animate-float-slow z-20"
           />
         </div>
       </main>
