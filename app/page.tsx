@@ -21,7 +21,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
 );
 
-const validSources = ["linkedin", "instagram", "facebook", "linktree", "unknown"];
+const validSources = ["linkedin", "instagram", "facebook", "linktree", "discord", "unknown"];
 
 export default function Home() {
   const [name, setName] = useState("");
