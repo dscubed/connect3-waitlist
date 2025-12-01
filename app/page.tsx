@@ -42,7 +42,7 @@ export default function Home() {
     gradient.initGradient('#gradient-canvas')
 
     const calculateTimeLeft = () => {
-    const targetDate = new Date('2026-01-16T00:00:00').getTime();
+    const targetDate = new Date('2026-02-16T00:00:00').getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
