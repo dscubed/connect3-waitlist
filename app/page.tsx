@@ -81,6 +81,12 @@ export default function Home() {
       return;
     }
 
+    if (!email.endsWith(".edu.au")) {
+      toast.error("Please enter a university email ending in .edu.au");
+      setSubmitting(false);
+      return;
+    }
+
     const { error } = await supabase
       .from("waitlist_responses")
       .insert([{ name, email }]);
@@ -210,8 +216,11 @@ export default function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full rounded-full bg-neutral-100 px-4 py-2 text-md focus:outline-2 focus:outline-purple-200"
-                placeholder="you@example.com"
+                placeholder="you@example.edu.au"
               ></input>
+              <p className="text-xs text-neutral-500 -mt-2 ml-4 text-left">
+                * University email only (ends with .edu.au)
+              </p>
               <button
                 disabled={submitting}
                 className="w-full px-4 py-2 font-medium rounded-full bg-black text-white transition-transform hover:scale-95 cursor-pointer"
