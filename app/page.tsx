@@ -21,6 +21,8 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
 );
 
+const validSources = ["linkedin", "instagram", "facebook", "linktree", "unknown"];
+
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,7 +30,8 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const { setUserId, track, identify } = useLogSnag();
   const searchParams = useSearchParams();
-  const UTMSource = searchParams.get("utm_source");
+  const rawUTMSource = searchParams.get("utm_source");
+  const UTMSource = (rawUTMSource && validSources.includes(rawUTMSource)) ? rawUTMSource : "unknown";
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
